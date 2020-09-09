@@ -31,8 +31,21 @@ console.log(wand)
 wand.innerText = "Vine wood with a unicorn hair core, 13 ¾ and slightly yielding flexibility"
 container.appendChild(wand)
 
+var items = ["butter beer", "invisibility cloak", "magic map", "time turner", "leash", "Bertie Bott's Every Flavor [Jelly] Beans"];
+var list = document.createElement("ul")
+container.appendChild(list)
+items.forEach(function(item){
+    var li = document.createElement("li");
+    li.textContent = item;
+    list.appendChild(li);
+});
+list.setAttribute("storage", "trunk")
 
-
+const magic = document.querySelectorAll("li")
+magic[1].className = "secret"
+magic[2].className = "secret"
+magic[3].className = "secret"
+magic[4].className = "cat"
 
 
 
